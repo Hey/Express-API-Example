@@ -2,9 +2,6 @@ module.exports = class {
 
   /**
    * The base url, home page.
-   * 
-   * @param {Request} req Express request
-   * @param {Response} res Express response
    */
   static async index(req, res, next) {
     try {
@@ -18,9 +15,6 @@ module.exports = class {
   /**
    * This redirects to the 
    * Github repository.
-   * 
-   * @param {Request} req Express request
-   * @param {Response} res Express response
    */
   static async git(req, res, next) {
     try {
