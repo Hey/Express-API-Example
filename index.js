@@ -8,8 +8,8 @@ const cors = require('cors');
 require('dotenv').config();
 
 // Import modules.
-const middlewares = require('./app/middlewares');
-const routes = require('./app/routes');
+const middlewares = require('./middlewares');
+const routes = require('./routes');
 
 const app = express();
 
