@@ -1,0 +1,31 @@
+{
+  "name": "express-api-example",
+  "version": "1.0.0",
+  "description": "https://github.com/Hey/Express-API-Example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hey/Express-API-Example.git"
+  },
+  "author": "@Hey (https://github.com/Hey)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hey/Express-API-Example/issues"
+  },
+  "homepage": "https://github.com/Hey/Express-API-Example#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
