@@ -5,9 +5,7 @@ module.exports = class {
    */
   static async index(req, res, next) {
     try {
-      res.status(200).send({
-        msg: 'Welcome to the page.'
-      }) 
+      res.status(200).send({msg: 'Welcome to the page.'}) 
     } catch (error) { res.error = error; next() } 
   }
 
