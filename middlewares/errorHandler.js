@@ -9,6 +9,6 @@ module.exports = async (req, res, next) => {
       stack: process.env.NODE_ENV === 'production' ? 'An error has ocurred.' : res.error.toString()
     });
   } catch (error) {
-    console.log(`Failed to handle error: ${error}\nThis happened with error: ${res.error}`)
+    console.log(`Error handler failed, handler error: ${error}\nReceived error: ${res.error}`)
   }
 }
