@@ -9,5 +9,4 @@ const Front = require('../controllers/Front.js')
 route.get('/', Front.index)
 route.get('/git', Front.git)
 
-
 module.exports = route;

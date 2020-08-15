@@ -8,5 +8,4 @@ const API = require('../controllers/API.js')
 // Endpoint defining.
 route.get('/', API.index)
 
-
 module.exports = route;

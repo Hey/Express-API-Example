@@ -6,5 +6,4 @@ const route = Router()
 route.use('/', require('./Front'))
 route.use('/api', require('./API'))
 
-
 module.exports = route
