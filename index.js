@@ -25,7 +25,6 @@ app.use(middlewares.errorHandler);
 app.use(middlewares.notFound);
 
 // Run server.
-const port = process.env.PORT || 8080;
-app.listen(port, () => {
-  console.log(`Listening: http://localhost:${port}`);
+app.listen((process.env.PORT || 8080), () => {
+  console.log(`Listening: http://localhost:${(process.env.PORT || 8080)}`);
 });
