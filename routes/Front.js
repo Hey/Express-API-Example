@@ -8,5 +8,6 @@ const Front = require('../controllers/Front.js')
 // Endpoint defining.
 route.get('/', Front.index)
 route.get('/git', Front.git)
+route.get('/fetch', Front.fetch)
 
-module.exports = route;
+module.exports = route

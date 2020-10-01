@@ -1,4 +1,4 @@
 module.exports = {
-    notFound: require('./notFound'),
-    errorHandler: require('./errorHandler')
+  notFound: require('./notFound'),
+  errorHandler: require('./errorHandler'),
 }

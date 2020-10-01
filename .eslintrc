@@ -1,0 +1,17 @@
+{
+    "root": true,
+    "extends": [
+        "plugin:prettier/recommended",
+        "airbnb"
+    ],
+    "env": {
+        "node": true,
+        "browser": true
+    },
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  }

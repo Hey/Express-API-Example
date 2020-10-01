@@ -3,9 +3,9 @@ const { Router } = require('express')
 const route = Router()
 
 // Get the controller for this endpoint.
-const API = require('../controllers/API.js')
+const API = require('../controllers/api.js')
 
 // Endpoint defining.
 route.get('/', API.index)
 
-module.exports = route;
+module.exports = route
