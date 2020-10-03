@@ -14,7 +14,7 @@ const routes = require('./routes')
 const app = express()
 
 // Express: package middleware.
-if (process.env.NODE_ENV != 'production') app.use(morgan('dev'))
+if (process.env.NODE_ENV !== 'production') app.use(morgan('dev'))
 app.use(helmet())
 app.use(cors())
 app.use(express.json())
