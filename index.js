@@ -11,9 +11,8 @@ require('dotenv').config()
 const middlewares = require('./middlewares')
 const routes = require('./routes')
 
+// Express: package middleware & initialization.
 const app = express()
-
-// Express: package middleware.
 if (process.env.NODE_ENV !== 'production') app.use(morgan('dev'))
 app.use(helmet())
 app.use(cors())
