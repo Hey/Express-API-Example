@@ -3,6 +3,10 @@ const request = require('request')
 module.exports = class {
   /**
    * The base url, home page.
+   * 
+   * @param {Object} req    - Request info we received.
+   * @param {Object} res    - Response we send back
+   * @param {function} next - Used to forward to next handler. 
    */
   static async Index(req, res, next) {
     try {
@@ -13,6 +17,10 @@ module.exports = class {
   /**
    * This redirects to the
    * Github repository.
+   * 
+   * @param {Object} req    - Request info we received.
+   * @param {Object} res    - Response we send back
+   * @param {function} next - Used to forward to next handler. 
    */
   static async Git(req, res, next) {
     try {
