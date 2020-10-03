@@ -1,5 +1,7 @@
 module.exports = async (req, res, next) => {
+
   try {
+    
     if (!res.error) return next()
     console.log(`Error catched by error handler middleware: ${res.error}`)
 
@@ -8,5 +10,7 @@ module.exports = async (req, res, next) => {
       error: true,
       stack: process.env.NODE_ENV === 'production' ? 'An error has ocurred.' : res.error.toString(),
     })
+
   } catch (error) { res.error = error; next(); }
+
 }
