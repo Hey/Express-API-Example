@@ -9,9 +9,11 @@ module.exports = class {
    */
   static async Index(req, res, next) {
     try {
+      
       res.status(200).json({
         msg: 'Welcome to the API',
       })
+
     } catch (error) { res.error = error; next(); }
   }
 
