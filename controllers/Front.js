@@ -46,7 +46,7 @@ module.exports = class {
     try {
 
       request('https://api.github.com/repos/Hey/Express-API-Example', { json: true, headers: { 'User-Agent': 'Hey' } }, function (apiErr, apiRes, apiBody) {
-          res.status(200).send({ repo: apiBody.name, url: apiBody.html_url, description: apiBody.description })
+          return res.status(200).send({ repo: apiBody.name, url: apiBody.html_url, description: apiBody.description })
       })
 
     } catch (error) { res.error = error; next(); }
