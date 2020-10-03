@@ -6,7 +6,7 @@ const route = Router()
 const Front = require('../controllers/front.js')
 
 // Endpoint defining.
-route.get('/', Front.index)
-route.get('/git', Front.git)
+route.get('/', Front.Index)
+route.get('/git', Front.Git)
 
 module.exports = route

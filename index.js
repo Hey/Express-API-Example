@@ -11,10 +11,9 @@ require('dotenv').config()
 const middlewares = require('./middlewares')
 const routes = require('./routes')
 
+// Express: package middleware & initialization.
 const app = express()
-
-// Express: package middleware.
-if (process.env.NODE_ENV != 'production') app.use(morgan('dev'))
+if (process.env.NODE_ENV !== 'production') app.use(morgan('dev'))
 app.use(helmet())
 app.use(cors())
 app.use(express.json())
@@ -25,6 +24,4 @@ app.use(middlewares.errorHandler)
 app.use(middlewares.notFound)
 
 // Run server.
-app.listen(process.env.PORT || 8080, () => {
-  console.log(`Listening: http://localhost:${process.env.PORT || 8080}`)
-})
+app.listen(process.env.PORT || 8080, () => console.log(`Listening: http://localhost:${process.env.PORT || 8080}`))

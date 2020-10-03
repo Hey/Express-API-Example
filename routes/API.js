@@ -6,6 +6,6 @@ const route = Router()
 const API = require('../controllers/api.js')
 
 // Endpoint defining.
-route.get('/', API.index)
+route.get('/', API.Index)
 
 module.exports = route
