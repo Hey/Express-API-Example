@@ -1,6 +1,7 @@
 const request = require('request')
 
 module.exports = class {
+
   /**
    * The base url, home page.
    * 
@@ -10,7 +11,9 @@ module.exports = class {
    */
   static async Index(req, res, next) {
     try {
+
       res.status(200).send({ msg: 'Welcome to the page.' })
+
     } catch (error) { res.error = error; next(); }
   }
 
@@ -24,7 +27,9 @@ module.exports = class {
    */
   static async Git(req, res, next) {
     try {
+
       res.redirect('https://github.com/Hey/Express-API-Example')
+      
     } catch (error) { res.error = error; next(); }
   }
 
