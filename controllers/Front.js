@@ -33,11 +33,22 @@ module.exports = class {
     } catch (error) { res.error = error; next(); }
   }
 
+
+  /**
+   * This is a showcase to see a creative workaround
+   * of CORS or simply to hide the API you're calling from.
+   * 
+   * @param {Object} req    - Request info we received.
+   * @param {Object} res    - Response we send back
+   * @param {function} next - Used to forward to next handler. 
+   */
   static async Fetch(req, res, next) {
-    request('https://api.github.com/repos/Hey/Express-API-Example', { json: true, headers: { 'User-Agent': 'Hey' } }, function (apiErr, apiRes, apiBody) {
-      try {
-        res.status(200).send({ repo: apiBody.name, url: apiBody.html_url, description: apiBody.description })
-      } catch (error) { res.error = error; next(); }
-    })
+    try {
+
+      request('https://api.github.com/repos/Hey/Express-API-Example', { json: true, headers: { 'User-Agent': 'Hey' } }, function (apiErr, apiRes, apiBody) {
+          res.status(200).send({ repo: apiBody.name, url: apiBody.html_url, description: apiBody.description })
+      })
+
+    } catch (error) { res.error = error; next(); }
   }
 }
